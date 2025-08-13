@@ -1,0 +1,59 @@
+.headerComponent {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.headerWraper {
+  background-color: rgba(15, 43, 43, 0.767);
+  border-left: 3px solid rgb(0, 0, 0);
+  border-right: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(0, 0, 0);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  align-content: center;
+  height: 100px;
+  width: 800px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: rgba(204, 111, 49, 0);
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+.links {
+  background-color: rgba(71, 121, 121, 0);
+  align-content: center;
+}
+
+.links ul {
+  background-color: rgba(0, 255, 255, 0);
+  height: 3rem;
+  padding-right: 1rem;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.links li {
+  align-content: center;
+}
+
+.links a {
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 255, 0);
+}

@@ -4,22 +4,28 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className={style.header}>
-      <div className={style.logo}>The Forum</div>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Liked</a>
-          </li>
-          <li>
-            <a href="#">Ask a question</a>
-          </li>
-          <li>
-            <a href="#">Login</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div className={style.headerComponent}>
+      <div className={style.headerWraper}>
+        <header className={style.header}>
+          <div className={style.logo}>
+            <h1>The Forum</h1>
+          </div>
+          <nav className={style.links}>
+            <ul>
+              <li>
+                <a href="#">Liked</a>
+              </li>
+              <li>
+                <a href="#">Ask a question</a>
+              </li>
+              <li>
+                <a href="#">Login</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
   );
 };
 

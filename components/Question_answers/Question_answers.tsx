@@ -44,42 +44,49 @@ const Question_answers = ({
   answers,
 }: QuestionAnswersProps) => {
   return (
-    <div className={style.q}>
-      {/* Question */}
-      <div className={style.questionSection}>
-        <div className={style.questionAuthor}>
-          <h1>{author.username}</h1>
-        </div>
-        <div className={style.questionUpdatedAt}>
-          <h2>{new Date(updated_at).toLocaleDateString()}</h2>
-        </div>
-        <div className={style.questionTitle}>
-          <h1>{title}</h1>
-        </div>
-        <div className={style.questionBody}>
-          <p>{body}</p>
-        </div>
-      </div>
+    <div className={style.componentAlign}>
+      <div className={style.questionComponent}>
+        {/* Question */}
+        <div className={style.questionSection}>
+          <div className={style.questionInfo}>
+            <div className={style.questionAuthor}>
+              <h1>{author.username}</h1>
+            </div>
+            <div className={style.questionUpdatedAt}>
+              <h2> Updated At: {new Date(updated_at).toLocaleDateString()}</h2>
+            </div>
+          </div>
+          <div className={style.questionTitle}>
+            <h1>{title}</h1>
+          </div>
+          <div className={style.questionBody}>
+            <p>{body}</p>
+          </div>
+          {/* Like & Share Buttons */}
 
-      {/* Add Answer Button */}
-      <div className={style.addAnswerButton}>
-        <button>Add Answer</button>
-      </div>
-
-      {/* Answers */}
-      {answers.map((answer) => (
-        <div key={answer.id} className={style.answerSection}>
-          <div className={style.answerAuthor}>
-            <h1>{answer.author.username}</h1>
-          </div>
-          <div className={style.answerUpdatedAt}>
-            <h2>{new Date(answer.updated_at).toLocaleDateString()}</h2>
-          </div>
-          <div className={style.answerBody}>
-            <p>{answer.body}</p>
+          <div className={style.addAnswerButtonWraper}>
+            {/* Add Answer Button */}
+            <div className={style.addAnswerButton}>
+              <button>Add Answer</button>
+            </div>
           </div>
         </div>
-      ))}
+
+        {/* Answers */}
+        {answers.map((answer) => (
+          <div key={answer.id} className={style.answerSection}>
+            <div className={style.answerAuthor}>
+              <h1>{answer.author.username}</h1>
+            </div>
+            <div className={style.answerUpdatedAt}>
+              <h2>{new Date(answer.updated_at).toLocaleDateString()}</h2>
+            </div>
+            <div className={style.answerBody}>
+              <p>{answer.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
