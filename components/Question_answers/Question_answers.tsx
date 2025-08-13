@@ -1,7 +1,5 @@
 import React from "react";
 import style from "./question_answers.module.css";
-import Image from "next/image";
-import LikeHeart from "./like_heart_icon.svg"; // works if SVGR is configured
 
 type User = {
   id: string;
@@ -98,11 +96,15 @@ const Question_answers = ({
         {/* Answers */}
         {answers.map((answer) => (
           <div key={answer.id} className={style.answerSection}>
-            <div className={style.answerAuthor}>
-              <h1>{answer.author.username}</h1>
-            </div>
-            <div className={style.answerUpdatedAt}>
-              <h2>{new Date(answer.updated_at).toLocaleDateString()}</h2>
+            <div className={style.answerInfo}>
+              <div className={style.answerAuthor}>
+                <h1>{answer.author.username}</h1>
+              </div>
+              <div className={style.answerUpdatedAt}>
+                <h2>
+                  Updated At: {new Date(answer.updated_at).toLocaleDateString()}
+                </h2>
+              </div>
             </div>
             <div className={style.answerBody}>
               <p>{answer.body}</p>
@@ -115,42 +117,3 @@ const Question_answers = ({
 };
 
 export default Question_answers;
-
-// const Question_answers = ({ title, body, tags }: QuestionAnswersProps) => {
-//   return (
-//     <div className={style.q}>
-//       <div className={style.questionSection}>
-//         <div className={style.questionAuthor}>
-//           <h1>User Name</h1>
-//         </div>
-//         <div className={style.questionUpdatedAt}>
-//           <h2> 2025/08/10</h2>
-//         </div>
-//         <div className={style.questionTitle}>
-//           <h1>Kas yra?</h1>
-//         </div>
-//         <div className={style.questionBody}>
-//           <p> Man įdomu kas yra...</p>
-//         </div>
-//       </div>
-
-//       <div className={style.addAnswerButton}>
-//         <button></button>
-//       </div>
-
-//       <div className={style.answerSection}>
-//         <div className={style.answerAuthor}>
-//           <h1>User Name</h1>
-//         </div>
-//         <div className={style.answerUpdatedAt}>
-//           <h2> 2025/08/11</h2>
-//         </div>
-//         <div className={style.answerBody}>
-//           <p>Yra nes...</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Question_answers;
