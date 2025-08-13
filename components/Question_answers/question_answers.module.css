@@ -26,6 +26,7 @@
 }
 .questionInfo {
   background-color: rgba(0, 255, 255, 0);
+  align-items: center;
   display: flex;
   gap: 1rem;
 }
@@ -35,14 +36,49 @@
   font-weight: 800;
 }
 .questionUpdatedAt {
+  color: rgba(63, 63, 63, 0.863);
+  font-size: small;
 }
 .questionTitle {
 }
 .questionBody {
 }
-.addAnswerButtonWraper {
+
+.ButtonsWraper {
+  background-color: rgba(255, 140, 0, 0);
   display: flex;
-  justify-content: end;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.likeShareButtonWraper {
+  gap: 0.5rem;
+  display: flex;
+}
+
+.likeButtonWraper {
+  background-color: rgb(114, 114, 113);
+  cursor: pointer;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 4px;
+}
+.likeButton {
+  background-color: rgba(255, 127, 80, 0);
+  width: 28px;
+  height: 28px;
+}
+.shareButtonWraper {
+  background-color: rgb(114, 114, 113);
+  cursor: pointer;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 4px;
+}
+.shareButton {
+  background-color: rgba(255, 127, 80, 0);
+  width: 28px;
+  height: 28px;
 }
 
 .addAnswerButton {

@@ -1,5 +1,7 @@
 import React from "react";
 import style from "./question_answers.module.css";
+import Image from "next/image";
+import LikeHeart from "./like_heart_icon.svg"; // works if SVGR is configured
 
 type User = {
   id: string;
@@ -62,12 +64,33 @@ const Question_answers = ({
           <div className={style.questionBody}>
             <p>{body}</p>
           </div>
-          {/* Like & Share Buttons */}
 
-          <div className={style.addAnswerButtonWraper}>
+          <div className={style.ButtonsWraper}>
+            {/* Like & Share Buttons */}
+            <div className={style.likeShareButtonWraper}>
+              <div className={style.likeButtonWraper}>
+                <img
+                  className={style.likeButton}
+                  src="/like_heart_icon.svg"
+                  alt="Like heart icon"
+                  width="24"
+                  height="24"
+                />
+              </div>
+              <div className={style.shareButtonWraper}>
+                <img
+                  className={style.shareButton}
+                  src="/share_icon.svg"
+                  alt="Share icon"
+                  width="24"
+                  height="24"
+                />
+              </div>
+            </div>
+
             {/* Add Answer Button */}
             <div className={style.addAnswerButton}>
-              <button>Add Answer</button>
+              <button>+ Add Answer</button>
             </div>
           </div>
         </div>
